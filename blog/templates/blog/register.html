@@ -1,0 +1,25 @@
+{%extends 'blog/main.html'%}
+{%block content%}
+<h1>Register page</h1>
+<form action="" method="POST">
+    {%csrf_token%}
+    <div>
+        <label for="">{{form.username.label}}</label>
+        {{form.username}}
+    </div>
+
+    <div>
+        <label for="">{{form.password1.label}}</label>
+        {{form.password1}}
+    </div>
+
+    <div>
+        <label for="">{{form.password2.label}}</label>
+        {{form.password2}}
+    </div>
+
+    <input style="margin-top: 10px;" class="button" type="submit" value="submit">
+</form>
+
+<p>Already have an account? <a href="{%url 'login'%}">Login</a></p>
+{%endblock%}

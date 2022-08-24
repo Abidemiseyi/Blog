@@ -1,0 +1,11 @@
+{%extends 'blog/main.html'%}
+{%block content%}
+<h1>Task form</h1>
+<a href="{%url 'blogs'%}">Go back</a>
+<form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Save">
+</form>
+
+{%endblock content %}

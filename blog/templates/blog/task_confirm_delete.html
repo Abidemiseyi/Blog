@@ -1,0 +1,11 @@
+{%extends 'blog/main.html'%}
+{%block content%}
+<a href="{%url 'blogs'%}">Go back</a>
+
+<form action="" method="POST">
+    {%csrf_token%}
+    <p>Are you sure you want to delete this blog? "{{blog}}"</p>
+    <input type="submit" value="Delete">
+</form>
+
+{%endblock content%}
